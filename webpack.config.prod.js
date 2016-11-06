@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'source-map',
   entry: ['./src/index'],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'docs'),
     filename: 'bundle.js'
   },
   plugins: [
@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: ['style', 'css']
-      }, 
+      },
       {
         test: /\.html$/,
         loader: "raw-loader"
