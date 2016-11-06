@@ -1,4 +1,4 @@
-# Webpack starter
+# Webpack setup
 
 Example of a simple Webpack configuration. Webpack will watch for changes and automatically generate new bundles.
 
