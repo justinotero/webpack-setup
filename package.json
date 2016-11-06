@@ -1,0 +1,24 @@
+{
+  "name": "webpack-starter",
+  "version": "1.1.0",
+  "author": "Urban Sanden",
+  "description": "Simple webpack starter",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "css-loader": "*",
+    "extract-text-webpack-plugin": "*",
+    "file-loader": "*",
+    "raw-loader": "^0.5.1",
+    "style-loader": "*",
+    "url-loader": "*",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "app-reset": "^1.0.2"
+  }
+}
