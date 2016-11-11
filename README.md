@@ -12,7 +12,5 @@ Example of a simple Webpack configuration. Webpack will watch for changes and au
 + HMR Hot Module Reloading (including html)
 + webpack-dev-server
 + Loaders for css, images, fonts
++ Separate css bundle
 + Dev and prod config files
-
-Wait, no eslint, babel?
-+ Coming.

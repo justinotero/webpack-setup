@@ -1,8 +1,8 @@
 {
-  "name": "webpack-starter",
+  "name": "webpack-setup",
   "version": "1.3.0",
   "author": "Urban Sanden",
-  "description": "Simple webpack starter",
+  "description": "Simple webpack setup",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
@@ -18,8 +18,5 @@
     "url-loader": "*",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
-  },
-  "dependencies": {
-    "app-reset": "^1.0.2"
   }
 }

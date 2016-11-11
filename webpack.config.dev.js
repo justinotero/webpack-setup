@@ -1,6 +1,7 @@
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -14,6 +15,9 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin("[name].css", {
+      allChunks: true
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     })
@@ -22,8 +26,8 @@ module.exports = {
     loaders: [
       {
         test: /\.css$/,
-        loaders: ['style', 'css']
-      }, 
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+      },
       {
         test: /\.html$/,
         loader: "raw-loader"
@@ -41,24 +45,8 @@ module.exports = {
         loader: "url-loader?prefix=img/&limit=5000"
       },
       {
-        test: /\.woff$/,
-        loader: "url-loader?prefix=font/&limit=5000"
-      },
-      {
-        test: /\.woff2$/,
-        loader: "url-loader?prefix=font/&limit=5000"
-      },
-      {
-        test: /\.eot$/,
-        loader: "file-loader?prefix=font/"
-      },
-      {
-        test: /\.ttf$/,
-        loader: "file-loader?prefix=font/"
-      },
-      {
-        test: /\.svg$/,
-        loader: "file-loader?prefix=font/"
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file?name=docs/fonts/[name].[ext]'
       }
     ]
   },
