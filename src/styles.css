@@ -5,13 +5,26 @@
 
 body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 125%;
-	padding: 1rem;
+	font-size: 85%;
+	padding: .25rem;
+}
+
+@media (min-width: 600px) {
+	body {
+		font-size: 125%;
+		padding: 1rem;
+	}
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 1.25rem;
 	font-weight: 500;
+}
+
+@media (min-width: 600px) {
+	h1 {
+		font-size: 3rem;
+	}
 }
 
 .buttons {
@@ -20,7 +33,7 @@ h1 {
 
 .buttons-travis {
 	display: inline-block;
-	margin-left: 1rem;
+	margin-left: .25rem;
 }
 
 .features {
@@ -37,8 +50,27 @@ h1 {
 	line-height: 1.8;
 	list-style: none;
 	border-bottom: 1px solid #ccc;
-	padding: 1rem 2rem;
+	padding: .5rem 1rem;
 }
+
+@media (min-width: 600px) {
+	.features li {
+		padding: 1rem 2rem;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+.footer {
+	text-align: center;
+}
+
+.footer a {
+	color: #ccc;
+}
+
 
 .feaures li:before {
 	content: counter(numbercounter);
@@ -57,7 +89,7 @@ pre {
 	background: #333;
 	color: white;
 	font-family: Menlo, Monaco, monospace;
-	font-size: 1.2rem;
+	font-size: .85rem;
 	padding: 1.5rem 2.5rem;
 	tab-size: 2;
 	word-break: normal;
@@ -65,7 +97,7 @@ pre {
 	hyphens: none;
 	position: relative;
 	text-align: center;
-	margin-top: 3rem;
+	margin-top: 1rem;
 	margin-bottom: 2rem;
 	tab-size: 4;
 	overflow: auto;
@@ -84,6 +116,13 @@ pre .comment {
 	margin-bottom: .25rem;
 }
 
+@media (min-width: 600px) {
+	pre {
+		font-size: 1.2rem;
+		margin-top: 3rem;
+	}
+}
+
 code {
 	margin: 0;
 	padding: 0
@@ -93,4 +132,14 @@ code {
 	max-width: 40em;
 	margin: 0 auto;
 	padding: 2rem;
+}
+
+.logo {
+	max-width: 25px;
+}
+
+@media (min-width: 600px) {
+	.logo {
+		max-width: 75px;
+	}
 }

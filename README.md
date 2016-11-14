@@ -9,8 +9,10 @@ Example of a simple Webpack configuration. Webpack will watch for changes and au
 3. Build for production: `npm run build`
 
 ## Features
-+ HMR Hot Module Reloading (including html)
-+ webpack-dev-server
-+ Loaders for css, images, fonts
++ Simple Webpack setup to get things started.
++ Write ES6 JavaScript
++ Development and production configuration files.
++ Hot Module Replacement (HMR) (Including html changes)
++ Loaders for css, fonts and images
 + Separate css bundle
-+ Dev and prod config files
++ Minified html in production build

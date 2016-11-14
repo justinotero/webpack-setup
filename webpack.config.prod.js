@@ -30,28 +30,23 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader?presets[]=es2015'
+      },
+      {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract("style-loader", "css-loader")
       },
       {
         test: /\.html$/,
-        loader: "raw-loader"
+        name: "mandrillTemplates",
+        loader: 'raw!html-minify'
       },
       {
-        test: /\.png$/,
-        loader: "url-loader?prefix=img/&limit=5000"
-      },
-      {
-        test: /\.jpg$/,
-        loader: "url-loader?prefix=img/&limit=5000"
-      },
-      {
-        test: /\.gif$/,
-        loader: "url-loader?prefix=img/&limit=5000"
-      },
-      {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file?name=docs/fonts/[name].[ext]'
+        test: /\.(jpe?g|png|gif)$/,
+        exclude: /(node_modules)/,
+        loader: 'url-loader?limit=10000'
       }
     ]
   }
