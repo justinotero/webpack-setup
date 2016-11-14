@@ -65,10 +65,23 @@ a {
 
 .footer {
 	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+	.footer {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+}
+
+.footer p {
+	color: #aaa;
 }
 
 .footer a {
-	color: #ccc;
+	color: #6CD4BC;
 }
 
 
