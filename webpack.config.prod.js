@@ -40,7 +40,6 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        name: "mandrillTemplates",
         loader: 'raw!html-minify'
       },
       {
