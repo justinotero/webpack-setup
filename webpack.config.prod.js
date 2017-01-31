@@ -2,10 +2,15 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const postcssImport = require('postcss-import');
+const postcssUrl = require('postcss-url');
 
 module.exports = {
   devtool: 'source-map',
-  entry: ['./src/index'],
+  entry: [
+    './src/index'
+  ],
   output: {
     path: path.join(__dirname, 'docs'),
     filename: 'bundle.js'
@@ -21,31 +26,66 @@ module.exports = {
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new HtmlWebpackPlugin({
+      filename: 'index.html',
       template: './src/index.html'
-    }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
     })
   ],
+  eslint: {
+     configFile: '.eslintrc'
+   },
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader?presets[]=es2015'
+        loaders: [ "babel-loader", "eslint-loader" ]
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        loader: ExtractTextPlugin.extract('style-loader', '!css-loader?sourceMap&importLoaders=1!postcss-loader')
       },
       {
         test: /\.html$/,
-        loader: 'raw!html-minify'
+        loader: "raw-loader"
       },
       {
-        test: /\.(jpe?g|png|gif)$/,
+        test: /\.(jpe?g|png|gif|svg)$/,
         exclude: /(node_modules)/,
-        loader: 'url-loader?limit=10000'
+        loader: 'url-loader?limit=8192'
+      },
+      {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url",
+        query: {
+          limit: 100000,
+          mimetype: "application/font-woff",
+          name: 'public/fonts/[hash].[ext]'
+        },
+      },
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url",
+        query: {
+          limit: 100000,
+          mimetype: "application/font-woff",
+          name: 'public/fonts/[hash].[ext]'
+        },
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url",
+        query: {
+          limit: 100000,
+          mimetype: "application/octet-stream",
+          name: 'public/fonts/[hash].[ext]'
+        },
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file",
+        query: {
+          name: 'public/fonts/[hash].[ext]'
+        },
       }
     ]
   }

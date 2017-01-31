@@ -13,6 +13,12 @@ Example of a simple Webpack configuration. Webpack will watch for changes and au
 + Write ES6 JavaScript
 + Development and production configuration files.
 + Hot Module Replacement (HMR) (Including html changes)
++ Stylelint (.stylelintrc)
++ Eslint (.eslintrc)
++ Travis
++ Editorconfig
 + Loaders for css, fonts and images
 + Separate css bundle
-+ Minified html in production build
++ Babel presets via .babelrc
++ Minified production build
++ Postcss with plugin setup via postcss.config.js
