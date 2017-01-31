@@ -1,7 +1,0 @@
-
-# Fagerhult Digital Innovator
-
-## Instructions
-
-### 
-
