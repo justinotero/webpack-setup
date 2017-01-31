@@ -1,4 +1,6 @@
-if (process.env.NODE_ENV !== 'production') {
+"use strict"
+
+if(process.env.NODE_ENV !== 'production') {
   require('./index.html')
 }
 
