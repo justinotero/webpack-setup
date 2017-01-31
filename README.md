@@ -11,6 +11,7 @@ Example of a simple Webpack configuration. Webpack will watch for changes and au
 ## Features
 + Simple Webpack setup to get things started.
 + Write ES6 JavaScript
++ Webpack dev server
 + Development and production configuration files.
 + Hot Module Replacement (HMR) (Including html changes)
 + Stylelint (.stylelintrc)
