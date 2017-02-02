@@ -60,7 +60,7 @@ h1 {
 
 a {
 	text-decoration: none;
-
+	color: #6CD4BC;
 	&:hover {
 		text-decoration: underline;
 	}
@@ -82,11 +82,6 @@ a {
 .footer p {
 	color: #aaa;
 }
-
-.footer a {
-	color: #6CD4BC;
-}
-
 
 .feaures li:before {
 	content: counter(numbercounter);
