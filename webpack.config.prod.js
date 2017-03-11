@@ -13,7 +13,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'docs'),
-    filename: 'bundle.js'
+    filename: '[name].[chunkhash].js'
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
@@ -21,7 +21,7 @@ module.exports = {
         warnings: false,
       },
     }),
-    new ExtractTextPlugin("[name].css", {
+    new ExtractTextPlugin("[contenthash].css", {
       allChunks: true
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),

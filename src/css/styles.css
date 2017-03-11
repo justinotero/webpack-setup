@@ -61,6 +61,7 @@ h1 {
 a {
 	text-decoration: none;
 	color: #6CD4BC;
+
 	&:hover {
 		text-decoration: underline;
 	}
