@@ -22,5 +22,5 @@ Example of a simple Webpack configuration. Webpack will watch for changes and au
 + Separate css bundle
 + Babel presets via .babelrc
 + Minified production build
-+ Hashed css and js files
++ Hashed/fingerprinted output files, css and js
 + Postcss with plugin setup via postcss.config.js
