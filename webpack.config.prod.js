@@ -21,7 +21,7 @@ module.exports = {
         warnings: false,
       },
     }),
-    new ExtractTextPlugin("[contenthash].css", {
+    new ExtractTextPlugin('[name].[contenthash].css', {
       allChunks: true
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
