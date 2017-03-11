@@ -1,22 +1,12 @@
 {
-	"env": {
-		"node": true,
-		"browser": true
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
 	},
 	"rules": {
 		"no-console": 2,
-		"no-extra-parens": 2,
-		"valid-jsdoc": [2, {"requireReturn": false}],
-		"no-else-return": 2,
-		"no-eq-null": 2,
-		"no-floating-decimal": 2,
-		"no-self-compare": 2,
-		"no-warning-comments": [2, { "terms": ["todo"], "location": "start" }],
-		"wrap-iife": 2,
-		"no-catch-shadow": 2,
-		"no-use-before-define": [2, "nofunc"],
-		"brace-style": [2, "1tbs"],
-		"comma-style": [2, "last"],
-		"func-style": [2, "declaration"]
 	}
 }

@@ -4,4 +4,5 @@ if(process.env.NODE_ENV !== 'production') {
   require('./index.html')
 }
 
-require('./css/styles.css');
+import './css/styles.css'
+import './js/scripts.js'
