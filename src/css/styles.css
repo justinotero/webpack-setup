@@ -68,7 +68,6 @@ a {
 	text-decoration: none;
 	color: #6CD4BC;
 	transition: all 500ms;
-	background-blend-mode: multiply;
 
 	&:hover {
 		color: color(var(--profiledark) a(75%))
